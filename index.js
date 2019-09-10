@@ -54,8 +54,8 @@ const start = async () => {
 
       await page.$$eval("select", nodes => {
         console.log('nodes: ', nodes);
-        nodes[0].value = 1;
-        nodes[1].value = 9;
+        nodes[0].value = 0; //ikke-medlem
+        nodes[1].value = 1; //medlem
       });
     
       await page.$eval("input[type=email]", node => {
